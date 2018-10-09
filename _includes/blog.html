@@ -7,12 +7,13 @@
 
 		<ul class="blog-standard">
 
+	            {% for post in paginator.posts %}
 		    <li> 
 			<div class="side-details">
 			    <div class="post-date">
-				<h4 class="month">Jan</h4>
-				<h3 class="day">30</h3>
-				<span class="year">2016</span>
+				    <h4 class="month">{{ post.mois }}</h4>
+				    <h3 class="day">{{ post.jour }}</h3>
+				    <span class="year">{{ post.annee }}</span>
 			    </div>
 			</div>
 			<div class="post-content">
@@ -25,90 +26,12 @@
 				    <span>,</span>
 				    <a href="blog-standard.html#">Travel</a>  
 				</p> 
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel odio sit amet turpis mattis tincidunt. Nulla nibh tellus, euismod at commodo quis, dictum eget tortor. Aliquam varius, nulla nec placerat consequat, tortor ante dictum ligula, in lobortis sapien lectus sed elit...<p>
+				<p>{{ post.content }}<p>
 			    </div> 
 			    <a class="read-more-link btn-appear" href="blog-post-carousel.html"><span>Read More <i class="ion-android-arrow-forward"></i></span></a>   
 			</div> 
 		    </li>
-
-		    <li> 
-			<div class="side-details">
-			    <div class="post-date">
-				<h4 class="month">Dec</h4>
-				<h3 class="day">24</h3>
-				<span class="year">2015</span>
-			    </div>
-			</div>
-			<div class="post-content">
-			    <div class="image-slider1 owl-carousel navigation-thin pagination-in">
-				<div><img src="img/blog/5.jpg" class="img-responsive width100" alt="#"></div>
-				<div><img src="img/blog/3.jpg" class="img-responsive width100" alt="#"></div>
-				<div><img src="img/blog/4.jpg" class="img-responsive width100" alt="#"></div>
-			    </div> 
-			    <div class="post-text">
-				<a class="link-to-post" href="blog-post-carousel.html"><h4>Carousel is Always Amazing</h4></a>
-				<p class="blog-post-categories">
-				    <span><i class="ion-ios-pricetags-outline"></i></span>
-				    <a href="blog-standard.html#">Travel</a> 
-				    <span>,</span>
-				    <a href="blog-standard.html#">Wander</a>  
-				</p> 
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel odio sit amet turpis mattis tincidunt. Nulla nibh tellus, euismod at commodo quis, dictum eget tortor. Aliquam varius, nulla nec placerat consequat, tortor ante dictum ligula, in lobortis sapien lectus sed elit...<p>
-			    </div> 
-			    <a class="read-more-link btn-appear" href="blog-post-carousel.html"><span>Read More <i class="ion-android-arrow-forward"></i></span></a>   
-			</div> 
-		    </li>
-
-		    <li> 
-			<div class="side-details">
-			    <div class="post-date">
-				<h4 class="month">Oct</h4>
-				<h3 class="day">17</h3>
-				<span class="year">2015</span>
-			    </div>
-			</div>
-			<div class="post-content">
-			    <div class="video-container"> 
-				<iframe src='http://player.vimeo.com/video/157100757' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-			    </div>
-			    <div class="post-text">
-				<a class="link-to-post" href="blog-post-carousel.html"><h4>Awesome Video Post</h4></a>
-				<p class="blog-post-categories">
-				    <span><i class="ion-ios-pricetags-outline"></i></span>
-				    <a href="blog-standard.html#">Travel</a> 
-				    <span>,</span>
-				    <a href="blog-standard.html#">Lifestyle</a>  
-				</p> 
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel odio sit amet turpis mattis tincidunt. Nulla nibh tellus, euismod at commodo quis, dictum eget tortor. Aliquam varius, nulla nec placerat consequat, tortor ante dictum ligula, in lobortis sapien lectus sed elit...<p>
-			    </div> 
-			    <a class="read-more-link btn-appear" href="blog-post-carousel.html"><span>Read More <i class="ion-android-arrow-forward"></i></span></a>   
-			</div> 
-		    </li>
-
-		    <li> 
-			<div class="side-details">
-			    <div class="post-date">
-				<h4 class="month">Sep</h4>
-				<h3 class="day">24</h3>
-				<span class="year">2015</span>
-			    </div>
-			</div>
-			<div class="post-content">
-			    <a href="blog-post-carousel.html"><h3>A flower does not think of competing with the flower next to it. It just blooms.</h3></a>
-			    <div class="post-text"> 
-				<p class="blog-post-categories">
-				    <span><i class="ion-ios-pricetags-outline"></i></span>
-				    <a href="blog-standard.html#">Wander</a> 
-				    <span>,</span>
-				    <a href="blog-standard.html#">Lifestyle</a>  
-				    <span>,</span>
-				    <a href="blog-standard.html#">Travel</a> 
-				</p> 
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel odio sit amet turpis mattis tincidunt. Nulla nibh tellus, euismod at commodo quis, dictum eget tortor. Aliquam varius, nulla nec placerat consequat, tortor ante dictum ligula, in lobortis sapien lectus sed elit...<p>
-			    </div> 
-			    <a class="read-more-link btn-appear" href="blog-post-carousel.html"><span>Read More <i class="ion-android-arrow-forward"></i></span></a>   
-			</div> 
-		    </li> 
+                {% endfor %}
 
 		</ul> 
 
